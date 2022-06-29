@@ -8,18 +8,18 @@
     justify-content: center;
     align-items:center;
     grid-template-rows: 70% 30%;
-}
-.index main h1{
-    grid-area: titulo;
-    color: $index-titulo-color;
-    font-size: 2.5rem;
-    transform: rotate(-10deg);
-    text-shadow: 5px 5px 1px $index-titulo-sombra;
-}
-.index main h2{
-    grid-area: subtitulo;
-    color: $index-subtitulo-color;
-    font-size: 1.5rem;
-    text-align: center;
-    justify-content: center;
+    h1{
+        grid-area: titulo;
+        color: $index-titulo-color;
+        font-size: 2.5rem;
+        transform: rotate(-10deg);
+        text-shadow: 5px 5px 1px $index-titulo-sombra;
+    }
+    h2{
+        grid-area: subtitulo;
+        color: $index-subtitulo-color;
+        font-size: 1.5rem;
+        text-align: center;
+        justify-content: center;
+    }
 }

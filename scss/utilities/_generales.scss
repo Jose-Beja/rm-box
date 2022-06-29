@@ -56,22 +56,22 @@ footer{
     width: 100%;
     position: relative;
     bottom: 10px;
-}
-footer .piepagina{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 30px;
-    .piepagina__redes{
-        text-align: center;
-        flex-wrap: wrap;
-        letter-spacing: 2px;
-        border-radius: 10px;
-        background-color: black;
-        color: rgb(255, 255, 255);
-        a{
-            text-decoration: none;
+    .piepagina{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 30px;
+        .piepagina__redes{
+            text-align: center;
+            flex-wrap: wrap;
+            letter-spacing: 2px;
+            border-radius: 10px;
+            background-color: black;
             color: rgb(255, 255, 255);
+            a{
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+            }
         }
     }
 }
