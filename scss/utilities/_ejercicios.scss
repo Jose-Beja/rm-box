@@ -1,0 +1,31 @@
+/* ESTILOS HOJA EJERCICIO */
+.ejercicios h1{
+    text-align: center;
+    font-size: 2rem;
+    color: #000000;
+    text-shadow: 2px 2px 5px $principal, 5px 5px 10px $secundario;
+    font-weight: bold;
+    letter-spacing: 6px;
+}
+.ejercicios article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.ejercicios .tarjeta{
+    background-color: #696767;
+}
+.ejercicios h2{
+    text-align: center;
+    color: #000000;
+}
+.ejercicios p{
+    color: #000000;
+}
+.ejercicios .img{
+    display: flex;
+    align-items: center;
+
+}
