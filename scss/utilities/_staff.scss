@@ -7,6 +7,7 @@
     text-transform: uppercase;  
     letter-spacing: 20px;
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 .staff .contenedor {
     display: grid;
@@ -29,13 +30,14 @@
     }
     .contenedor__carta--mili{
         @extend %cartas;
-        background:url(../../assets/img/staff/presentacion2.jpg) center no-repeat;
+        background:url(../../assets/img/staff/mili.png) center no-repeat;
         background-size: cover;
     }
     .contenedor__carta--mari{
         @extend %cartas;
         background:url(../../assets/img/staff/EQF_3190.jpg) center no-repeat;
         background-size: cover;
+        margin-bottom: 60px;
     }
 }
 

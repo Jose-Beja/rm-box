@@ -4,9 +4,9 @@
   justify-content: center;
   text-align: center;
   position: relative;
-  width: 35vh;
+  width: 40vh;
   height: 60vh;
-  margin: 20px auto;
+  margin: 5px auto;
   color: #000000;
   font-weight: bold;
   overflow: hidden;
@@ -47,6 +47,8 @@ header nav ul {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center; }
+  header nav ul .escritorio {
+    display: none; }
   header nav ul li {
     list-style: none; }
     header nav ul li a {
@@ -61,36 +63,36 @@ header nav ul {
       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
       text-align: center;
       color: black;
-      font-weight: bold; }
+      font-weight: bold;
+      font-size: 0.8rem; }
 
 /* ESTILOS FOOTER GENERAL. */
 footer {
   width: 100%;
-  position: relative;
-  bottom: 10px; }
-  footer .piepagina {
+  position: fixed;
+  bottom: 0; }
+  footer .piepagina__redes {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 30px; }
-    footer .piepagina .piepagina__redes {
-      text-align: center;
-      flex-wrap: wrap;
-      letter-spacing: 2px;
-      border-radius: 10px;
-      background-color: black;
+    padding: 10px;
+    text-align: center;
+    flex-wrap: wrap;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    background-color: rgba(43, 43, 43, 0.9);
+    color: white; }
+    footer .piepagina__redes a {
+      text-decoration: none;
       color: white; }
-      footer .piepagina .piepagina__redes a {
-        text-decoration: none;
-        color: white; }
 
 .piepagina__whatsapp {
   position: fixed;
-  bottom: 150px;
-  right: 50px; }
+  bottom: 70px;
+  right: 20px; }
   .piepagina__whatsapp img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     opacity: 0.5s;
     animation: pulso 2s ease-out infinite; }
 
@@ -102,33 +104,42 @@ footer {
 .index main {
   width: 100%;
   height: 50vh;
+  padding: 10px;
   display: grid;
-  grid-template-areas: "titulo" "subtitulo";
+  grid-template-areas: "titulo" "parrafo" "subtitulo";
   justify-content: center;
   align-items: center;
-  grid-template-rows: 70% 30%; }
+  grid-template-rows: 50% 20% 30%;
+  row-gap: 20px; }
   .index main h1 {
     grid-area: titulo;
     color: white;
+    text-align: center;
     font-size: 2.5rem;
-    transform: rotate(-10deg);
     text-shadow: 5px 5px 1px black; }
+  .index main p {
+    grid-area: parrafo;
+    text-align: center;
+    font-size: 0.9rem;
+    color: white;
+    margin: 30px 20px; }
   .index main h2 {
     grid-area: subtitulo;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     justify-content: center; }
 
 /* ESTILOS HOJA STAFF */
 .staff h1 {
-  color: #6e6d6e;
+  color: #b9b6b9;
   text-align: center;
   font-size: 2.5rem;
   text-shadow: 5px 5px 1px black;
   text-transform: uppercase;
   letter-spacing: 20px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  margin-bottom: 20px; }
 
 .staff .contenedor {
   display: grid;
@@ -144,11 +155,12 @@ footer {
     background: url(../../assets/img/staff/Fede.jpg) center no-repeat;
     background-size: cover; }
   .staff .contenedor .contenedor__carta--mili {
-    background: url(../../assets/img/staff/presentacion2.jpg) center no-repeat;
+    background: url(../../assets/img/staff/mili.png) center no-repeat;
     background-size: cover; }
   .staff .contenedor .contenedor__carta--mari {
     background: url(../../assets/img/staff/EQF_3190.jpg) center no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    margin-bottom: 60px; }
 
 .contenedor__carta__titulo {
   color: #e6007e;
@@ -173,16 +185,17 @@ footer {
   color: white;
   text-shadow: 5px 5px 1px black; }
 
-.horario .tabla {
+.horario main .tabla {
   display: none; }
 
-.horario .contenedor {
+.horario main .contenedor {
+  margin: 20px 0;
   display: flex;
   align-items: center;
   justify-content: center; }
-  .horario .contenedor .contenedor__menu li {
+  .horario main .contenedor .contenedor__menu li {
     margin: 5px; }
-    .horario .contenedor .contenedor__menu li a {
+    .horario main .contenedor .contenedor__menu li a {
       display: inline-block;
       width: 100px;
       margin: 5px;
@@ -197,8 +210,8 @@ footer {
 
 .horario .contenedor__semana {
   position: relative;
-  width: 150px;
-  height: 530px; }
+  width: 130px;
+  height: 450px; }
   .horario .contenedor__semana li {
     position: absolute;
     opacity: 0;
@@ -206,7 +219,7 @@ footer {
     height: inherit;
     transition: opacity .5s; }
     .horario .contenedor__semana li img {
-      height: 500px;
+      height: 400px;
       object-fit: contain;
       box-shadow: 5px 5px 5px #e6007e, 10px 10px 10px #19ff81;
       border-radius: 10px; }
@@ -218,6 +231,7 @@ footer {
 /* ESTILOS HOJA PROMOCIONES */
 .promociones h1 {
   color: white;
+  margin: 10px 0 20px;
   text-align: center;
   text-shadow: 5px 5px 1px black; }
 
@@ -228,47 +242,17 @@ footer {
   align-items: center;
   gap: 40px;
   margin-bottom: 50px; }
-
-.promociones .img img {
-  width: 250px; }
+  .promociones .img img {
+    width: 250px; }
 
 .promociones .img__1 {
   border-radius: 10px;
   box-shadow: 5px 5px 10px #19ff81; }
 
 .promociones .img__2 {
+  margin-bottom: 10px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #e6007e; }
-
-/* ESTILOS HOJA EJERCICIO */
-.ejercicios h1 {
-  text-align: center;
-  font-size: 2rem;
-  color: #000000;
-  text-shadow: 2px 2px 5px #e6007e, 5px 5px 10px #19ff81;
-  font-weight: bold;
-  letter-spacing: 6px; }
-
-.ejercicios article {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px; }
-
-.ejercicios .tarjeta {
-  background-color: #696767; }
-
-.ejercicios h2 {
-  text-align: center;
-  color: #000000; }
-
-.ejercicios p {
-  color: #000000; }
-
-.ejercicios .img {
-  display: flex;
-  align-items: center; }
 
 /* media queri 600px */
 @media screen and (min-width: 600px) {
@@ -280,26 +264,35 @@ footer {
     background-attachment: fixed;
     width: 100%; }
   header img {
-    width: 150px; }
+    margin-right: -10px;
+    width: 150px;
+    z-index: 2px;
+    position: relative; }
   header nav ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
-    padding: 10px 10px;
-    background-color: #868585;
+    padding: 10px 5px;
+    background-color: #19ff81;
     box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.5);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     gap: 10px; }
-  header nav ul li a {
-    width: fit-content;
-    padding: 10px;
-    margin: 0px 0px;
-    border: transparent;
-    box-shadow: none;
-    background-color: transparent;
-    border-radius: 0px; }
-  header nav ul li a:hover {
-    background-color: blueviolet; }
+    header nav ul .escritorio {
+      display: contents; }
+    header nav ul li .primera {
+      padding-left: 20px; }
+    header nav ul li a {
+      width: fit-content;
+      padding: 10px 5px;
+      margin: 0px 0px;
+      border: transparent;
+      box-shadow: none;
+      background-color: transparent;
+      border-radius: 0px; }
+    header nav ul li a:hover {
+      background-color: #e6007e; }
   /* /////////////////////////////////////////////////////////////////////////////////// */
   /* ESTILOS LOGO WHATSAPP */
   .piepagina__whatsapp img {
@@ -311,76 +304,14 @@ footer {
   /* ESTILO HOJA INDEX*/
   .index main {
     height: 65vh; }
-  .index main h1 {
-    font-size: 4.5rem; }
-  .index main h2 {
-    font-size: 3rem; }
+    .index main h1 {
+      font-size: 4.5rem; }
+    .index main h2 {
+      font-size: 3rem; }
   /* /////////////////////////////////////////////////////////////////////////////////// */
   /* ESTILOS HOJA STAFF */
   .staff h1 {
-    font-size: 3.5rem; }
-  .contenedor__carta__contenido {
-    transform: translateY(180px); }
-  /* /////////////////////////////////////////////////////////////////////////////////// */
-  /* ESTILOS HOJA HORARIOS */
-  .horario .contenedor__menu li a {
-    margin-right: 80px; }
-  .horario .contenedor__semana {
-    margin: 30px; }
-  /* /////////////////////////////////////////////////////////////////////////////////// */
-  /* ESTILOS HOJA PROMOCIONES */
-  .promociones h1 {
-    font-size: 3rem;
-    margin-top: 50px;
-    margin-bottom: 50px; }
-  .promociones .img {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; }
-  .promociones .img img {
-    width: 400px; }
-  /* /////////////////////////////////////////////////////////////////////////////////// */
-  /* ESTILOS HOJA EJERCICIO */
-  .ejercicios h1 {
-    font-size: 3rem; } }
-
-/* media queri 1200px */
-@media screen and (min-width: 1200px) {
-  /* ESTILOS HEADER GENERAL */
-  header img {
-    width: 200px; }
-  header nav ul {
-    box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.5); }
-  header nav ul li a {
-    padding: 10px 30px;
-    font-size: 1.5rem; }
-  /* ESTILOS FOOTER GENERAL. */
-  footer {
-    width: 100%; }
-  footer .piepagina {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-  .piepagina__redes {
-    letter-spacing: 3px;
-    font-size: 1.3rem; }
-  /* /////////////////////////////////////////////////////////////////////////////////// */
-  /* ESTILOS LOGO WHATSAPP */
-  .piepagina__whatsapp img {
-    bottom: 90px;
-    right: 100px;
-    height: 100px;
-    width: 100px; }
-  /* /////////////////////////////////////////////////////////////////////////////////// */
-  /* ESTILO HOJA INDEX*/
-  .index main h1 {
-    font-size: 5.5rem; }
-  .index main h2 {
     font-size: 3rem; }
-  /* /////////////////////////////////////////////////////////////////////////////////// */
-  /* ESTILOS HOJA STAFF */
   .staff .contenedor {
     grid-template-areas: "ana nina" "tirri tirri" "mili mili" "mari mari";
     justify-content: center;
@@ -391,37 +322,33 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 300px;
     padding: 5px;
     background-color: rgba(119, 212, 150, 0.5);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    transform: translateY(280px);
+    transform: translateY(190px);
     transition: transform .25s; }
-  .contenedor__carta__titulo {
-    color: #e6007e;
-    line-height: 50px;
-    font-size: 1.5rem;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 5px; }
-  .contenedor__carta__subtitulo {
-    display: block;
-    font-size: 1.2em;
-    text-align: center;
-    margin-bottom: 30px; }
-  .contenedor__carta__descripcion {
-    display: contents;
-    font-size: 1em;
-    letter-spacing: 2px;
-    text-align: center;
-    opacity: 0;
-    transition: opacity .6s; }
-  .contenedor__carta__titulo {
-    font-size: 2.5em; }
-  .contenedor__carta__subtitulo {
-    font-size: 1.8em; }
-  .contenedor__carta__descripcion {
-    font-size: 1.2em; }
+    .contenedor__carta__contenido .contenedor__carta__titulo {
+      padding: 5px;
+      color: #e6007e;
+      line-height: 50px;
+      font-size: 1.7rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 5px; }
+    .contenedor__carta__contenido .contenedor__carta__subtitulo {
+      display: block;
+      font-size: 1.4em;
+      text-align: center;
+      margin-bottom: 30px; }
+    .contenedor__carta__contenido .contenedor__carta__descripcion {
+      display: contents;
+      font-size: 1em;
+      letter-spacing: 2px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity .6s; }
   .contenedor__carta--ana {
     grid-area: ana; }
   .contenedor__carta--ana:hover .contenedor__carta__contenido {
@@ -459,41 +386,144 @@ footer {
     transition-delay: .25s; }
   /* /////////////////////////////////////////////////////////////////////////////////// */
   /* ESTILOS HOJA HORARIOS */
+  .horario .contenedor__menu li a {
+    margin-right: 80px; }
+  .horario .contenedor__semana {
+    margin: 30px; }
+  /* /////////////////////////////////////////////////////////////////////////////////// */
+  /* ESTILOS HOJA PROMOCIONES */
+  .promociones h1 {
+    font-size: 3rem;
+    margin-top: 50px;
+    margin-bottom: 50px; }
+  .promociones .img {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    .promociones .img img {
+      width: 400px; }
+  /* /////////////////////////////////////////////////////////////////////////////////// */
+  /* ESTILOS HOJA EJERCICIO */
+  .ejercicios h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #000000;
+    text-shadow: 2px 2px 5px #e6007e, 5px 5px 10px #19ff81;
+    font-weight: bold;
+    letter-spacing: 6px; }
+  .ejercicios article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; }
+  .ejercicios .tarjeta {
+    width: 300px;
+    background-color: #696767; }
+  .ejercicios h2 {
+    text-align: center;
+    color: #000000; }
+  .ejercicios p {
+    display: none; } }
+
+/* media queri 1200px */
+@media screen and (min-width: 1200px) {
+  /* ESTILOS HEADER GENERAL */
+  header img {
+    width: 200px; }
+  header nav ul {
+    box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.5); }
+  header nav ul li a {
+    padding: 10px 30px;
+    font-size: 1.5rem; }
+  /* ESTILOS FOOTER GENERAL. */
+  footer {
+    width: 100%; }
+  footer .piepagina {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  .piepagina__redes {
+    letter-spacing: 3px;
+    font-size: 1.5rem; }
+  /* /////////////////////////////////////////////////////////////////////////////////// */
+  /* ESTILOS LOGO WHATSAPP */
+  .piepagina__whatsapp img {
+    bottom: 90px;
+    right: 100px;
+    height: 100px;
+    width: 100px; }
+  /* /////////////////////////////////////////////////////////////////////////////////// */
+  /* ESTILO HOJA INDEX*/
+  .index main h1 {
+    font-size: 5.5rem; }
+  .index main h2 {
+    font-size: 3rem; }
+  .index main p {
+    font-size: 1.5rem;
+    width: 650px; }
+  /* /////////////////////////////////////////////////////////////////////////////////// */
+  /* ESTILOS HOJA STAFF */
+  .staff h1 {
+    font-size: 4rem; }
+  /* /////////////////////////////////////////////////////////////////////////////////// */
+  /* ESTILOS HOJA HORARIOS */
   .horario main {
     width: 100%;
     height: 75vh;
     display: flex;
     flex-direction: column; }
-  .horario .titulo {
-    color: #6e6d6e;
-    text-align: center;
-    font-size: 3.5rem;
-    text-shadow: 5px 5px 1px black;
-    text-transform: uppercase;
-    letter-spacing: 20px;
-    margin-top: 30px; }
-  .horario .tabla {
-    display: contents; }
-  .horario table {
-    border-spacing: 20px 0px;
-    border-collapse: separate;
-    margin: 40px; }
-  .horario .tabla__encabezado {
-    background-color: #353434;
-    text-align: center;
-    font-size: 1.7rem;
-    color: white; }
-  .horario .tabla__cuerpo {
-    background-color: black;
-    color: white;
-    font-size: 1.5rem;
-    text-align: center;
-    font-weight: bold; }
-  .horario table tbody td {
-    padding: 5px; }
-  .horario .contenedor {
-    display: none; }
+    .horario main .titulo {
+      color: #6e6d6e;
+      text-align: center;
+      font-size: 3.5rem;
+      text-shadow: 5px 5px 1px black;
+      text-transform: uppercase;
+      letter-spacing: 20px;
+      margin-top: 30px; }
+    .horario main .tabla {
+      display: contents; }
+    .horario main table {
+      border-spacing: 20px 0px;
+      border-collapse: separate;
+      margin: 40px; }
+    .horario main .tabla__encabezado {
+      background-color: #353434;
+      text-align: center;
+      font-size: 1.7rem;
+      color: white; }
+    .horario main .tabla__cuerpo {
+      background-color: black;
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: bold; }
+      .horario main .tabla__cuerpo table tbody td {
+        padding: 5px; }
+    .horario main .contenedor {
+      display: none; }
   /* /////////////////////////////////////////////////////////////////////////////////// */
   /* ESTILOS HOJA EJERCICIO */
   .ejercicios h1 {
-    font-size: 4rem; } }
+    text-align: center;
+    font-size: 3rem;
+    color: #000000;
+    text-shadow: 2px 2px 5px #e6007e, 5px 5px 10px #19ff81;
+    font-weight: bold;
+    letter-spacing: 6px; }
+  .ejercicios article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; }
+  .ejercicios .tarjeta {
+    width: 600px;
+    background-color: #696767; }
+  .ejercicios h2 {
+    text-align: center;
+    color: #000000; }
+  .ejercicios p {
+    display: contents; } }

@@ -12,7 +12,7 @@ $index-titulo-sombra: rgb(0,0,0);
 $index-subtitulo-color:rgba(255,255,255,1);
 
 //hoja staff
-$staff-titulo-color: rgb(110,109,110);
+$staff-titulo-color: rgb(185, 182, 185);
 $staff-titulo-sombra: rgb(0,0,0);
 
 //propiedades fondo.
@@ -29,9 +29,9 @@ $staff-titulo-sombra: rgb(0,0,0);
     justify-content: center;
     text-align: center;
     position: relative;
-    width: 35vh;
+    width: 40vh;
     height: 60vh;
-    margin: 20px auto;
+    margin: 5px auto;
     color: #000000;
     font-weight: bold;
     overflow: hidden;

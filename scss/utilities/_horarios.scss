@@ -5,34 +5,37 @@
     color: white;
     text-shadow: 5px 5px 1px black;
     }
-    .tabla{
-        display: none;    
+    main{
+        .tabla{
+            display: none;    
     }
-    .contenedor{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .contenedor__menu li{
-            margin: 5px;
-            a{
-                display: inline-block;
-                width: 100px;
+        .contenedor{
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .contenedor__menu li{
                 margin: 5px;
-                padding: 5px;
-                background-color: rgb(230, 222, 222);
-                border: 1px solid black;
-                border-radius: 20px;
-                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-                text-align: center;
-                color: black;
-                font-weight: bold;
+                a{
+                    display: inline-block;
+                    width: 100px;
+                    margin: 5px;
+                    padding: 5px;
+                    background-color: rgb(230, 222, 222);
+                    border: 1px solid black;
+                    border-radius: 20px;
+                    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+                    text-align: center;
+                    color: black;
+                    font-weight: bold;
+                }
             }
         }
     }
     .contenedor__semana{
         position: relative;
-        width: 150px;
-        height: 530px;
+        width: 130px;
+        height: 450px;
         li{
             position: absolute;
             opacity: 0;
@@ -40,7 +43,7 @@
             height: inherit;
             transition: opacity .5s;
             img{
-                height: 500px;
+                height: 400px;
                 object-fit: contain;
                 box-shadow: 5px 5px 5px $principal, 10px 10px 10px $secundario;
                 border-radius: 10px;
