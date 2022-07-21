@@ -526,4 +526,7 @@ footer {
     text-align: center;
     color: #000000; }
   .ejercicios p {
-    display: contents; } }
+    display: contents; }
+  .ejercicios img {
+    height: 100%;
+    border-radius: 100%; } }

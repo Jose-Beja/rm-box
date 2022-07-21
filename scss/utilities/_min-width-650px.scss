@@ -38,10 +38,10 @@
                background-color: transparent;
                border-radius: 0px;
            }
+           a:hover{
+               background-color: $principal;
+           }
         } 
-       li a:hover{
-           background-color: $principal;
-       }
     }
     /* /////////////////////////////////////////////////////////////////////////////////// */
     /* ESTILOS LOGO WHATSAPP */
